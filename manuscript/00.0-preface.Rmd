@@ -1,7 +1,9 @@
 ```{r setup, cache=FALSE, include=FALSE}
 devtools::load_all()
 is.html = !is.null(output) && output == "html"
-only.in.html = "*This chapter is currently only available in the Web version. ebook and print will follow.*"
+only.in.html = "*This chapter is currently only available in this web version. ebook and print will follow.*"
+
+devtools::install_github("viadee/anchorsOnR")
 ```
 
 
@@ -33,7 +35,6 @@ Reading the book is recommended for machine learning practitioners, data scienti
 
 **About me:** My name is Christoph Molnar, I'm a statistician and a machine learner.
 My goal is to make machine learning interpretable.
-If you are interested in improving the interpretability of your machine learning models, do not hesitate to contact me!
 
 Mail: christoph.molnar.ai@gmail.com
 

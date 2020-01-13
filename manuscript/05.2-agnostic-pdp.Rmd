@@ -8,7 +8,7 @@ set.seed(42)
 ## Partial Dependence Plot (PDP) {#pdp}
 
 The partial dependence plot (short PDP or PD plot) shows the marginal effect one or two features have on the predicted outcome of a machine learning model (J. H. Friedman 2001[^Friedman2001]). 
-A partial dependence plot can show whether the relationship between the target and a feature is linear, monotonous or more complex.
+A partial dependence plot can show whether the relationship between the target and a feature is linear, monotonic or more complex.
 For example, when applied to a linear regression model, partial dependence plots always show a linear relationship.
 
 <!-- *Keywords: partial dependence plots, PDP, PD plot, marginal means, predictive margins, marginal effects* -->
@@ -96,7 +96,7 @@ At least intuitively, I would expect the number of bicycles to decrease with inc
 
 To illustrate a partial dependence plot with a categorical feature, we examine the effect of the season feature on the predicted bike rentals.
 
-```{r pdp-bike-cat, fig.cap = 'PDPs for the bike count prediction model and the season. Unexpectedly all seasons show the same effect, only for spring the model predicts less bicycle rentals.'}
+```{r pdp-bike-cat, fig.cap = 'PDPs for the bike count prediction model and the season. Unexpectedly all seasons show similar effect on the model predictions, only for spring the model predicts less bicycle rentals.'}
 
 pdp = FeatureEffect$new(pred.bike, "season", method = "pdp") 
 ggplot(pdp$results) + 
@@ -187,7 +187,7 @@ By plotting the [individual conditional expectation curves](#ice) instead of the
 
 There are a number of R packages that implement PDPs. 
 I used the `iml` package for the examples, but there is also `pdp` or `DALEX`.
-In Python you can use `Skater`.
+In Python, partial dependence plots are built into `scikit-learn` and you can use `PDPBox`.
 
 Alternatives to PDPs presented in this book are [ALE plots](#ale) and [ICE curves](#ice).
 

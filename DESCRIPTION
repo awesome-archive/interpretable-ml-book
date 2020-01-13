@@ -42,6 +42,9 @@ Imports:
   readr, 
   Cairo,
   viridis,
-  interactions
+  interactions,
+  rjson,
+  png,
+  R.utils
 Remotes: christophM/interpretable-ml-book
 
